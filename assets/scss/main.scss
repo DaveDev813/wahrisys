@@ -1,0 +1,252 @@
+// load Bourbon Framework
+$output-bourbon-deprecation-warnings: false;
+@import '../node_modules/bourbon/app/assets/stylesheets/bourbon';
+
+#logout{
+    padding: 3px 20px;
+    min-height: 0;
+    cursor: pointer;
+} 
+
+#page-wrapper::before, .loginPage::before{
+    content: "";
+    position: absolute;  
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg2.jpg');
+    left: 0; 
+    background-size: cover;
+    opacity: .11;
+}
+.loginPage::before{
+    @include transform(rotate(180deg));
+}
+
+.loginPage{
+    background: #fceabb; /* Old browsers */
+    background: -moz-linear-gradient(left, #fceabb 0%, #fccd4d 46%, #f8b500 100%, #fbdf93 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #fceabb 0%,#fccd4d 46%,#f8b500 100%,#fbdf93 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #fceabb 0%,#fccd4d 46%,#f8b500 100%,#fbdf93 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93',GradientType=1 ); /* IE6-9 */
+    #logIn{
+        @include transform(translateY(14%));
+    }
+    #sysTitle{
+        h1{
+            font-family: sans-serif;
+            font-weight: 900;
+            color: #fe0000;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.85);
+        }
+        small{
+            font-family: sans-serif;
+            font-weight: 800;
+            color: rgba(254, 0, 0, 0.66); 
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.22);
+        }
+    }
+
+    img{
+        height: 156px;
+    }
+    .panel{
+        background-color: rgba(255, 255, 255, 0.46);
+        border: none; 
+    }
+    .panel-default>.panel-heading {
+        background-color: rgba(245, 245, 220, 0);
+        border-color: rgba(245, 245, 220, 0);
+    }
+    .login-panel {
+        margin-top: 9%; 
+    }
+    .myButton {
+        -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+        -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+        box-shadow:inset 0px 1px 0px 0px #cf866c;
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+        background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+        background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+        background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+        background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+        background:linear-gradient(to bottom, #d0451b 5%, #bc3315 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+        background-color:#d0451b;
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+        border:1px solid #942911;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:13px;
+        padding:6px 24px;
+        text-decoration:none;
+        text-shadow:0px 1px 0px #854629;
+    }
+    .myButton:hover {
+        background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+        background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+        background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+        background-color:#bc3315;
+    }
+    .myButton:active {
+        position:relative;
+        top:1px;
+    }
+
+} // End Login Block
+
+.navbar-static-top{
+    background-color: #f0ad4e;
+    .navbar-brand {
+        color: #fff3e3;
+        font-weight: 700;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.67);
+        &:hover{
+            @extend .navbar-brand;
+        }
+    }
+} 
+
+.dropdown-toggle{
+    color: #fff;
+}
+
+/*.page-header{
+    font-size: 25px;
+    margin: 16px 0 13px;
+}*/
+
+.page-header {
+    font-size: 22px;
+    margin: 16px 0 6px;
+    font-weight: 600;
+}
+
+.breadcrumb {
+    margin-bottom: 12px;
+}
+
+input{
+    height: 100% !important;
+}
+
+.printer{
+    #wrapper{
+        margin: 10px;
+        .print_header{
+            line-height: 17px;
+        }
+        .company_name{
+            font-weight: 800 !important;
+        }
+        .row.body {
+            margin: 13px;
+        }
+        .table>tbody>tr>td, 
+        .table>tbody>tr>th, 
+        .table>tfoot>tr>td, 
+        .table>tfoot>tr>th, 
+        .table>thead>tr>td, 
+        .table>thead>tr>th {
+            padding: 1px 8px 1px 8px;
+        }
+    }
+}
+
+.form-div{
+    .panel{
+        margin-bottom: 0;
+        border-radius: 0px;
+    }
+}
+
+.flexigrid div.form-div {
+    padding: 0px 0px 0px 0px;
+}
+
+.container-flexgrid{
+    margin: 0;
+    padding: 0;
+    display: inline;
+    position: relative;
+    .panel{
+        border: none;
+    }
+}
+
+input{
+    box-sizing : border-box;
+}
+
+@media screen and (max-width: 1859px) {
+    .form-input-box, .flexigrid input[type=text].form-control {
+        width: 100%; 
+    }
+    .form-field-box {
+        margin: 0;
+    }
+}
+
+#crudForm .pDiv {
+    background: #f5f5f5 !important;
+}
+
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #f0ad4e;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.crud-form{
+    .panel-heading {
+        border-radius: 0;
+    }
+}
+
+.ftitle-left {
+    color: #ea8a02;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.07);
+    font-size: 18px;
+}
+
+.form-field-box {
+    display: flex;
+}
+
+.form-control[disabled], 
+.form-control[readonly], 
+fieldset[disabled] .form-control 
+{
+    border: 1px solid #ccc !important;
+    background-color: #eee !important;
+}
+
+#syslogo{
+    @include filter(drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 8px #fff));
+    margin-bottom: -37px;
+}
+
+.panel{
+    border-radius: 0px;
+}
+
+#gCalendar{
+    .panel-body{
+        padding: 0;
+    }
+}
+#main-table-box {
+    .btn-group{
+        margin: 2px;
+    }
+}
